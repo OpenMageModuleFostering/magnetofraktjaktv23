@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+  <default>
+    <carriers>
+      <fraktjakt_fraktjaktmodule>
+        <active>1</active>
+        <sallowspecific>0</sallowspecific>
+        <model>Fraktjakt_Fraktjaktmodule_Model_Carrier_Shippingmethod</model>
+        <name>Fraktjakt_Fraktjaktmodule</name>
+        <title>Fraktjakt_Fraktjaktmodule</title>
+        <specificerrmsg>Din valda frakttjänst är inte tillgänglig för din mottagaradress.</specificerrmsg>
+        <erroremail>0</erroremail>
+        <handling_type>F</handling_type>
+        <min_shipping_value>0</min_shipping_value>
+        <max_shipping_value>0</max_shipping_value>
+        <min_shipping_weight>0</min_shipping_weight>
+        <max_shipping_weight>0</max_shipping_weight>
+        <showmethod>0</showmethod>
+      </fraktjakt_fraktjaktmodule>
+    </carriers>
+  </default>
+  <modules>
+    <Fraktjakt_Fraktjaktmodule>
+      <version>0.2.3</version>
+    </Fraktjakt_Fraktjaktmodule>
+  </modules>
+  <global>
+   
+    <models>
+      <fraktjakt_fraktjaktmodule>
+        <class>Fraktjakt_Fraktjaktmodule_Model</class>
+      </fraktjakt_fraktjaktmodule>
+    </models>
+    <helpers>
+      <fraktjakt_fraktjaktmodule>
+        <class>Fraktjakt_Fraktjaktmodule_Helper</class>
+      </fraktjakt_fraktjaktmodule>
+    </helpers>
+    <blocks>
+      <fraktjakt_fraktjaktmodule>
+        <class>Fraktjakt_Fraktjaktmodule_Block</class>
+      </fraktjakt_fraktjaktmodule>
+    </blocks>
+    <resources>
+      <fraktjakt_fraktjaktmodule_setup>
+        <setup>
+          <module>Fraktjakt_Fraktjaktmodule</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </fraktjakt_fraktjaktmodule_setup>
+    </resources>
+    <events>
+      <sales_order_save_after>
+        <observers>
+          <Fraktjakt_Fraktjaktmodule_Model_Observer>
+            <type>singleton</type>
+            <class>Fraktjakt_Fraktjaktmodule_Model_Observer</class>
+            <method>salestest</method>
+          </Fraktjakt_Fraktjaktmodule_Model_Observer>
+        </observers>
+      </sales_order_save_after>
+    </events>
+    <blocks>
+      <adminhtml>
+        <rewrite>
+          <sales_order_view>Fraktjakt_Fraktjaktmodule_Block_Adminhtml_Sales_Order_View</sales_order_view>
+          <sales_order_shipment_view>Fraktjakt_Fraktjaktmodule_Block_Adminhtml_Sales_Order_Shipment_View</sales_order_shipment_view>
+        </rewrite>
+      </adminhtml>
+    </blocks>
+  </global>
+  <frontend>
+  <routers>
+<checkout>
+<args>
+<modules>
+<Fraktjakt_Fraktjaktmodule before="Mage_Checkout">Fraktjakt_Fraktjaktmodule_Checkout</Fraktjakt_Fraktjaktmodule>
+</modules>
+</args>
+</checkout>
+</routers>
+    <layout>
+      <updates>
+        <fraktjakt_fraktjaktmodule>
+          <file>fraktjakt_fraktjaktmodule.xml</file>
+        </fraktjakt_fraktjaktmodule>
+      </updates>
+    </layout>
+  </frontend>
+</config>

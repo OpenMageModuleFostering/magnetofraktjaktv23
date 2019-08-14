@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Fraktjakt_Fraktjaktmodule>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Fraktjakt_Fraktjaktmodule>
+  </modules>
+</config>

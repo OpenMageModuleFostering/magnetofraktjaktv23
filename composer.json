@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/magnetofraktjaktv23",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Integrates Fraktjakt for a complete shipping solution for Posten, Schenker, Bussgods, DHL, DSV, UPS, Fedex...",
+    "authors": [
+    {
+        "name": "Fraktjakt Ecommerce Team",
+        "email": "info@fraktjakt.se"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

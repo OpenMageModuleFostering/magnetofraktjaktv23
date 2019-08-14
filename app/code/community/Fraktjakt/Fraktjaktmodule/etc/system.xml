@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <carriers>
+      <groups>
+        <fraktjakt_fraktjaktmodule translate="label" module="shipping">
+          <label>Fraktjakt</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>13</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <consignorID translate="label">
+              <label>consignor ID</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </consignorID>
+            <consignorkey translate="label">
+              <label>consignor key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </consignorkey>
+            <fraktjaktLogin translate="label">
+              <label>Fraktjakt Login</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>96</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </fraktjaktLogin>
+            <fraktjaktPassword translate="label">
+              <label>Fraktjakt Lösenord</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>97</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </fraktjaktPassword>
+            <run translate="label">
+              <label>Run now</label>
+              <frontend_type>button</frontend_type>
+              <frontend_model>fraktjakt_fraktjaktmodule/button</frontend_model>
+              <sort_order>98</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </run>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </active>
+            <test_mode translate="label">
+              <label>Test Mode</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </test_mode>
+            <debug translate="label">
+              <label>Debug Mode</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </debug>
+            <usecache translate="label">
+              <label>Use Cache for faster Checkout Page loads?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </usecache>
+            <returnlang translate="label">
+              <label>Set SV Return Language (Default is EN)</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </returnlang>
+            <returnlangstore translate="label">
+              <label>Return Swedish based on Store Language? (Defaults to english unless the store is SV)</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </returnlangstore>
+            <sort_order translate="label">
+              <label>Sort order</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>100</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </sort_order>
+            <title translate="label">
+              <label>Title</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </title>
+            <failover_ratetitle translate="label">
+              <label>Fallback-frakttjänst</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </failover_ratetitle>
+            <failover_rate translate="label">
+              <label>Fallback-kostnad för frakt</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </failover_rate>
+            <sallowspecific translate="label">
+              <label>Frakt till tillgängliga länder</label>
+              <frontend_type>select</frontend_type>
+              <sort_order>90</sort_order>
+              <frontend_class>shipping-applicable-country</frontend_class>
+              <source_model>adminhtml/system_config_source_shipping_allspecificcountries</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </sallowspecific>
+            <specificcountry translate="label">
+              <label>Frakt till enstaka länder</label>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>91</sort_order>
+              <source_model>adminhtml/system_config_source_country</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </specificcountry>
+            <erroremail translate="label">
+              <label>Skicka emailrapport om misslyckade fraktsökningar</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>92</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </erroremail>
+          </fields>
+        </fraktjakt_fraktjaktmodule>
+      </groups>
+    </carriers>
+  </sections>
+</config>
