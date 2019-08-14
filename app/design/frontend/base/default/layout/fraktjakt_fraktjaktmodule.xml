@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+ 
+  <checkout_cart_index>
+  <reference name="checkout.cart">
+    <block type="checkout/cart_shipping" name="checkout.cart.shipping" as="shipping"  template="fraktjakt/fraktjaktmodule/checkout/cart/shipping.phtml"/>
+	</reference>
+  </checkout_cart_index>
+  <checkout_onepage_shippingmethod>
+    <block type="checkout/onepage_shipping_method_available" name="root" output="toHtml" template="fraktjakt/fraktjaktmodule/checkout/onepage/shipping_method/fraktjakttemplate.phtml"/>
+  </checkout_onepage_shippingmethod>
+</layout>
