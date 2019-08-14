@@ -321,8 +321,9 @@ if($xml_results){
         }
         unset($xml_result);
         $xpath = $xml_results->xpath('tax_class');
+		//$tax_class = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '';
 		//echo "<pre>";
-		//print_r($xpath);
+		//print_r($xml_result);
 		//exit;
         $handling = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '0';
         $allowedMethods = explode(",", strtolower($this->getConfigData('allowed_methods')));
@@ -352,6 +353,10 @@ if($xml_results){
             $agent_info = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '';
             $xpath = $prod->xpath('price');
             $rate = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '';
+			$xpath = $prod->xpath('tax_class');
+            $tax_class = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '';
+			//$rate = $tax_class;
+			$rate =  $rate+(($tax_class*$rate)/100);
 			$xpath = $prod->xpath('id');
             $shippingid = ($xpath !== FALSE && isset($xpath[0])) ? (string)$xpath[0] : '';
 
