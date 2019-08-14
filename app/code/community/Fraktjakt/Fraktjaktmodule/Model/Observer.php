@@ -369,12 +369,12 @@ $quantity = round($item->getQtyOrdered());
 	                        //Mage::throwException($this->__('Tracking number cannot be empty.'));
 							 Mage::throwException('Tracking number cannot be empty.'); 
                    }
-			
+			//print_r($order);
 			$track = Mage::getModel('sales/order_shipment_track')
                     ->setNumber($shipmentTrackingNumber)
-                    ->setCarrierCode( $order->getShippingCarrier()->getCarrierCode())
+                    ->setCarrierCode( $this->_code)
 					->setUrl("http://www.fraktjakt.se/trace/list_shipment/$shipmentTrackingNumber")
-                    ->setTitle($order->getShippingCarrier()->getConfigData('title'));
+                    ->setTitle(Mage::getStoreConfig('carriers/'.$this->_code.'/'.$key));
 					
             $shipment->addTrack($track);
 			
