@@ -44,7 +44,7 @@
               <show_in_store>0</show_in_store>
             </fraktjaktPassword>
             <run translate="label">
-              <label>Run now</label>
+              <label>Log in</label>
               <frontend_type>button</frontend_type>
               <frontend_model>fraktjakt_fraktjaktmodule/button</frontend_model>
               <sort_order>98</sort_order>

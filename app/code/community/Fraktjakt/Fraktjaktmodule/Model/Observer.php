@@ -372,9 +372,9 @@ $quantity = round($item->getQtyOrdered());
 			//print_r($order);
 			$track = Mage::getModel('sales/order_shipment_track')
                     ->setNumber($shipmentTrackingNumber)
-                    ->setCarrierCode( $this->_code)
+                    ->setCarrierCode( $order->getShippingCarrier()->getCarrierCode())
 					->setUrl("http://www.fraktjakt.se/trace/list_shipment/$shipmentTrackingNumber")
-                    ->setTitle(Mage::getStoreConfig('carriers/'.$this->_code.'/'.$key));
+                    ->setTitle(Mage::getStoreConfig('carriers/'.$this->_code.'/title'));
 					
             $shipment->addTrack($track);
 			

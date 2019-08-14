@@ -24,7 +24,7 @@ class Fraktjakt_Fraktjaktmodule_Block_Button extends Mage_Adminhtml_Block_System
                 $html = $this->getLayout()->createBlock('adminhtml/widget_button')
                     ->setType('button')
                     ->setClass('scalable')
-                    ->setLabel('Run Now !')
+                    ->setLabel('Log in!')
 					 ->setTarget('_blank')
                     ->setOnClick("setLocation('$url')")
                     ->toHtml();

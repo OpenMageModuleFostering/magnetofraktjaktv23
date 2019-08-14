@@ -7,7 +7,7 @@
         <sallowspecific>0</sallowspecific>
         <model>Fraktjakt_Fraktjaktmodule_Model_Carrier_Shippingmethod</model>
         <name>Fraktjakt_Fraktjaktmodule</name>
-        <title>Fraktjakt_Fraktjaktmodule</title>
+        <title>Fraktalternativ - från Fraktjakt</title>
         <specificerrmsg>Din valda frakttjänst är inte tillgänglig för din mottagaradress.</specificerrmsg>
         <erroremail>0</erroremail>
         <handling_type>F</handling_type>
